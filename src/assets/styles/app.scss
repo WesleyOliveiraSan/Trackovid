@@ -1,6 +1,6 @@
 // Config
-//@import '/font-awesome.scss';
-//@import "./font-awesome/fontawesome";
+@import './font-awesome/';
 //@import "~bootstrap/dist/css/bootstrap.min.css";
+@import '_mixins.scss';
 
-@import "general"
+@import "general.scss";
