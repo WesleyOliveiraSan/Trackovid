@@ -1,11 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 function Home() {
+
     return (
         <div>
-          <h1>
-              teste
-          </h1>  
+            <h1>oi</h1>
         </div>
     )
 }
