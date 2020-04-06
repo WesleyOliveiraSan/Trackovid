@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import ReactMapGL from 'react-map-gl';
+import env from '../../env'
 
 function Map() {
     const [viewport, setViewport] = useState({
@@ -12,7 +13,7 @@ function Map() {
 
     return (
         <ReactMapGL
-            mapboxApiAccessToken={'pk.eyJ1Ijoid2VzeHl6IiwiYSI6ImNrOG5oZ3IwOTB5OXUzb3FvMTViYzExeTYifQ.L7Ov3S4qJhTQApDqtH74ig'}
+            mapboxApiAccessToken={env.CLIENT_MAPBOX.ACCESS_TOKEN}
             {...viewport}
             onViewportChange={setViewport}
             mapStyle='mapbox://styles/mapbox/outdoors-v11'
