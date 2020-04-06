@@ -6,5 +6,3 @@ export const clientAPICovid = axios.create({
         'Content-Type' : 'application/json',
     }
 })
-
-export default clientAPICovid;
