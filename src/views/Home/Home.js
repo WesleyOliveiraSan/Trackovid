@@ -7,9 +7,7 @@ function Home() {
 
     return (
         <div>
-            <h1>
-                <Map />
-            </h1>
+            <Map />
         </div>
     )
 }

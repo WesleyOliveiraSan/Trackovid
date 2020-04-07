@@ -1,24 +1,39 @@
-import React, { useState } from 'react';
-import ReactMapGL from 'react-map-gl';
-import env from '../../env'
+import React from "react";
+import { VectorMap } from "react-jvectormap";
 
-function Map() {
-    const [viewport, setViewport] = useState({
-        width: 400,
-        height: 400,
-        latitude: -14.2400732,
-        longitude: -53.1805017,
-        zoom: 3
-    });
+const handleClick = (e, stateCode) => {
+    console.log(stateCode);
+};
 
+const Map = () => {
     return (
-        <ReactMapGL
-            mapboxApiAccessToken={env.CLIENT_MAPBOX.ACCESS_TOKEN}
-            {...viewport}
-            onViewportChange={setViewport}
-            mapStyle='mapbox://styles/mapbox/outdoors-v11'
-        />
+        <div>
+            <VectorMap
+                map={"brazil"}
+                backgroundColor="transparent" //ocean blue: #0077be
+                zoomOnScroll={true}
+                containerStyle={{
+                    width: "400px",
+                    height: "400px"
+                }}
+                onRegionClick={handleClick}
+                regionStyle={{
+                    initial: {
+                        fill: "#000",
+                        "fill-opacity": 0.9,
+                    },
+                    hover: {
+                        "fill-opacity": 0.8,
+                    },
+                    selected: {
+                        fill: "#2938bc"
+                    }
+                }}
+                regionsSelectable
+                regionsSelectableOne
+            />
+        </div>
     );
-}
+};
 
-export default Map
+export default Map;
