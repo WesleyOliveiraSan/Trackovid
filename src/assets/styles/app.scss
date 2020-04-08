@@ -1,5 +1,12 @@
 // Config
 //@import "~bootstrap/dist/css/bootstrap.min.css";
-@import '_mixins.scss';
 
-@import "general.scss";
+// Fonts
+@import "fonts";
+
+// Config
+@import "variables",
+"mixins",
+"general";
+
+
