@@ -1,8 +1,17 @@
 import React from "react";
+
+//Services
+import { clientAPICovid } from '../../services/api'
+
+//Dependencies
 import { VectorMap } from "react-jvectormap";
 
 const handleClick = (e, stateCode) => {
-    console.log(stateCode);
+    clientAPICovid.get(`/brazil/uf/${stateCode}`)
+        .then(res => {
+            console.log(res.data);
+        })
+        .catch(err => console.log(err.message));
 };
 
 const Map = () => {
