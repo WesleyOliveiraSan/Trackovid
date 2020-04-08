@@ -15,11 +15,9 @@ import MainRoutes from './mainRoutes'
 function App() {
   return (
     <BrowserRouter>
-      <div className="row">
-        <aside className="col-lg-2">
-          <Sidenav />
-        </aside>
-        <main className="col-lg-10">
+      <div>
+        <Sidenav />
+        <main>
           <Header />
           <MainRoutes />
           <Footer />

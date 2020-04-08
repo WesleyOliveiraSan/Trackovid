@@ -1,4 +1,9 @@
 body {
+
+    *{
+        font-family: 'Lato';
+    }
+
     background-color: $white;
     color: $black;
     font: {
@@ -11,9 +16,70 @@ body {
     }
 }
 
-nav{
-    background-color:$green;
+nav {
+    width: 200px;
+    background-color: $green;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    color: $mint;
+    text-align:center;
+
+    h1{
+        margin:50px 0;
+        .title{
+            text-decoration: none;
+        }
+    }
+
+    .link {
+        display: block;
+        padding: 16px;
+        text-decoration: none;
+        &:hover {
+            background-color: rgba($white,0.1);
+            color: white;
+        }
+    }
+
 }
+main {
+    margin-left:200px;
+    padding: 1px 16px;
+}
+@include mq('tablet','max'){   
+    nav{    
+        width: 100%;
+        height: auto;       
+        position: relative;
+        h1{
+            display: none;
+        }
+        .link{
+            float: left;
+        }
+    }
+    main{
+        margin-left: 0;
+    }
+}
+@include mq('phone','max'){   
+    nav{    
+        width: 100%;
+        height: auto;       
+        position: relative;
+        h1{
+            display: none;
+        }
+        .link{
+            float: left;
+        }
+    }
+    main{
+        margin-left: 0;
+    }
+}
+
 
 img {
     max-width: 100%;

@@ -22,7 +22,7 @@ const Map = () => {
                 backgroundColor="transparent" //ocean blue: #0077be
                 zoomOnScroll={true}
                 containerStyle={{
-                    width: "400px",
+                    width: "inherit",
                     height: "400px"
                 }}
                 onRegionClick={handleClick}
