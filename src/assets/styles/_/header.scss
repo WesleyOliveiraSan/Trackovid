@@ -1,0 +1,14 @@
+
+//ESSE ESTILO DO HEADER TA UMA BOSTA EU N CONSIGO FAZER ESTILO SEM LAYOUT :( 
+// NÃO NASCI COM DOM DE UX ME PERDOA DEUS
+.header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px 0;
+    background-color: #4f98ca;
+    h2 {
+        margin-bottom: 0;
+        text-transform: uppercase;
+    }
+}

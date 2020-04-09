@@ -16,9 +16,11 @@ function App() {
   return (
     <BrowserRouter>
       <div>
+        <div>
+          <Header />
+        </div>
         <Sidenav />
         <main>
-          <Header />
           <MainRoutes />
           <Footer />
         </main>
