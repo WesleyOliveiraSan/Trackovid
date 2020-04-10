@@ -6,7 +6,6 @@ import { BrowserRouter } from 'react-router-dom';
 
 //Components
 import Header from './components/Header'
-import Footer from './components/Footer';
 import Sidenav from './components/Sidenav';
 
 //Routes
@@ -16,11 +15,10 @@ function App() {
   return (
     <BrowserRouter>
       <div>
+        <Header />
         <Sidenav />
         <main>
-          <Header />
           <MainRoutes />
-          <Footer />
         </main>
       </div>
     </BrowserRouter>
