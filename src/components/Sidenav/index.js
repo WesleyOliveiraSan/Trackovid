@@ -14,7 +14,7 @@ function Sidenav() {
             </div>
             <div>
                 <img src={Logo} alt="Mask Logo"/>
-                <Link className="link" to="/">Home</Link>
+                <Link className="link" to="/">Mapa</Link>
             </div>
         </nav>
     )
