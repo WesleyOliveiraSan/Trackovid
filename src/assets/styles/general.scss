@@ -19,37 +19,58 @@ body {
 nav {
     width: 200px;
     height: 100%;
-    background-color: $blue;
+    background-color: $black;
+    box-shadow: 0 4px 8px 0 rgba($black, 0.2), 0 6px 20px 0 rgba($black, 0.19);
     position: fixed;
     padding-top: 60px;
     overflow: auto;
-    color: $mint;
-    text-align: center;
+    color: $white;
+    text-align: left;
 
-    img{
+    .nav-div{
+        background-color: $blue;
+        text-align:left;
+        color: $white;
+        font-weight: bold;
+        padding: 16px;
+        p{
+            margin:0;
+        }
+    }
+
+    .logo{
         display:block;
         margin: 25px auto;
         width: 80px;
     }
-
+    .desc{
+        text-align:center;
+        font-size: 12px;
+        color: rgba($white,0.9);
+    }
     .link {
         display: block;
         padding: 16px;
         text-decoration: none;
-        &:hover {
-            background-color: rgba($white,0.1);
+        &:hover:not(.active) {
+            background-color: rgba(0,0,0,0.1);
             color: white;
         }
     }
+    .active{
+        border-left: 5px solid rgba($blue,0.8);
+        background-color: rgba(0,0,0,0.2);
+    }
+   
 
 }
 header{
-    background-color: $black;
+    background-color: $blue;
     position: fixed;
     width: 100%;
     z-index:99999;
     h1{
-        background-color: rgba($white,0.1);
+        background-color: rgba($white,0.2);
         padding: 0px 10px;
         font-weight:bold;
         margin-bottom: 0;
@@ -58,7 +79,7 @@ header{
         border-radius: 10px;
         &:hover{
             color: rgba($white,0.9);
-            background-color: rgba($white,0.2);
+            background-color: rgba($white,0.1);
         }
     }
     img{
@@ -82,11 +103,23 @@ main{
         height: auto;       
         position: relative;
         padding-top:0;
-        img{
+        .logo, .desc{
             display: none;
         }
         .link{
-            float: left;
+            background-color: $black;
+            float: none;
+        }
+        .menu{
+            width:32px;
+            height:32px;
+            align-self: center;
+            padding: 5px;
+            background-color: rgba($blue,0.8);
+            margin-right: 16px;
+        }
+        .active{
+            background-color: rgba(0,0,0,0.2);
         }
     }
     main{
@@ -100,9 +133,6 @@ main{
         position: relative;
         h1{
             display: none;
-        }
-        .link{
-            float: left;
         }
     }
     main{
