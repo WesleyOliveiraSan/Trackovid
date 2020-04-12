@@ -11,17 +11,17 @@ function Home() {
             <div className="row mt-5">
                 <div className="col-6">
                     <div className="row">
-                        <div className="col-6 pb-3">
-                            <Card title="Casos Confirmados" />
+                        <div className="col-5 pb-3">
+                            <Card title="Casos Confirmados" content="30" />
                         </div>
-                        <div className="col-6 pb-3">
-                            <Card title="Casos de Curas"/>
+                        <div className="col-5 pb-3">
+                            <Card title="Casos de Curas" content="30" />
                         </div>
-                        <div className="col-6 pb-3">
-                            <Card title="Casos Descartados" />
+                        <div className="col-5 pb-3">
+                            <Card title="Casos Descartados" content="30" />
                         </div>
-                        <div className="col-6 pb-3">
-                            <Card title="Casos de Mortes"/>
+                        <div className="col-5 pb-3">
+                            <Card title="Casos de Mortes" content="30" />
                         </div>
                     </div>
                 </div>

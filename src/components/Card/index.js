@@ -9,7 +9,9 @@ const Card = (props) => (
                 }
             </div>
             <div className="card-body">
-                oi
+                {
+                props.content
+                }
             </div>
         </div>
     </div>

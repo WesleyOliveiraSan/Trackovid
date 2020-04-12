@@ -28,14 +28,15 @@ const Map = () => {
                 onRegionClick={handleClick}
                 regionStyle={{
                     initial: {
-                        fill: "#000",
+                        fill: "#50d890",
                         "fill-opacity": 0.9,
                     },
                     hover: {
                         "fill-opacity": 0.8,
                     },
                     selected: {
-                        fill: "#2938bc"
+                        fill: "#48B97D",
+                        "fill-opacity": 0.9
                     }
                 }}
                 regionsSelectable

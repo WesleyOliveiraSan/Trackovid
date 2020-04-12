@@ -326,22 +326,6 @@ strong {
 table {
     color: $white!important;
 }
-
-.xdsoft_autocomplete_dropdown {
-    color: $black;
-    padding: 10px;
-
-    b {
-        font-family: Museo-500;
-    }
-}
-
-.xdsoft_autocomplete .xdsoft_autocomplete_dropdown > div.active {
-    font-family: Museo-500;
-    background: transparent;
-    color: $black;
-}
-
 .list-number {
     padding-left: 15px;
     li {
@@ -355,14 +339,21 @@ table {
 
 .card-trackovid {
     box-shadow: 0 4px 8px 0 rgba($black, 0.2), 0 6px 20px 0 rgba($black, 0.19);
-    padding: 2px;
+    border-radius: .75rem;
+    
+   // padding: 2px;
     div:first-child {
-        background-color: #304153;
-        color: #ffffff;
+      //  background-color: #304153;
+        //color: #ffffff;
         text-align: center;
     }
     .card-header {
-        border-bottom: 0;
-        background-color: transparent;
+        //border-bottom: 0;
+        border-radius: calc(.75rem - 1px) calc(.75rem - 1px) 0 0;
+        background-color: $green;
+        color: $white;
+    }
+    .card-body {
+        min-height: 80px;
     }
 }
