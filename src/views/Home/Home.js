@@ -7,29 +7,28 @@ import Card from '../../components/Card'
 function Home() {
 
     return (
-        <div>
-            <div className="row">
-                <div className="col-5">
+        <div className="p-5">
+            <div className="row mt-5">
+                <div className="col-6">
                     <div className="row">
-                        <div className="col-6">
-                            <Card title="teste" />
+                        <div className="col-6 pb-3">
+                            <Card title="Casos Confirmados" />
                         </div>
-                        <div className="col-6">
-                            <Card title="teste"/>
+                        <div className="col-6 pb-3">
+                            <Card title="Casos de Curas"/>
                         </div>
-                        <div className="col-6">
-                            <Card title="teste" />
+                        <div className="col-6 pb-3">
+                            <Card title="Casos Descartados" />
                         </div>
-                        <div className="col-6">
-                            <Card title="teste"/>
+                        <div className="col-6 pb-3">
+                            <Card title="Casos de Mortes"/>
                         </div>
                     </div>
                 </div>
-                <div className="col-7">
+                <div className="col-6">
                     <Map />
                 </div>
             </div>
-            
         </div>
     )
 }
