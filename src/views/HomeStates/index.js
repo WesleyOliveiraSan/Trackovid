@@ -31,7 +31,7 @@ function HomeStates() {
                 <tbody>
                     {
                         data.map(state =>
-                            <tr>
+                            <tr key={state.uf}>
                                 <th>{state.uf}</th>
                                 <td>{state.state}</td>
                                 <td>{state.cases}</td>

@@ -15,10 +15,10 @@ function HomeMap() {
                     <div className="col-lg-12 pb-3">
                         <Card title="Casos Confirmados" content={data.cases} />
                     </div>
-                    <div className="col-lg-6 pb-3">
+                    <div className="col-lg-6 pr-0 pb-3">
                         <Card title="Suspeitas" content={data.suspects} />
                     </div>
-                    <div className="col-lg-6 pb-3">
+                    <div className="col-lg-6 pl-0 pb-3">
                         <Card title="Mortes" content={data.deaths} />
                     </div>
                 </div>

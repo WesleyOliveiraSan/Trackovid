@@ -1,7 +1,7 @@
 import React from 'react'
 
 //Dependencies
-import { Outlet, Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 
 function Home() {
 
