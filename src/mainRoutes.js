@@ -6,7 +6,7 @@ import { Routes, Route } from 'react-router-dom';
 //Views
 import Home from './views/Home';
 import HomeMap from './views/HomeMap'
-import HomeBrazil from './views/HomeBrazil'
+import HomeBrazil from './views/Homebrazil'
 import HomeStates from './views/HomeStates'
 
 const MainRoutes = () => (
