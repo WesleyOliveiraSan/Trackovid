@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 //Components
 import Map from '../../components/Map'
@@ -6,27 +6,27 @@ import Card from '../../components/Card'
 
 function Home() {
 
+    const [data, setData] = useState([])
+    
     return (
         <div className="p-5">
-            <div className="row mt-5">
-                <div className="col-6">
-                    <div className="row">
-                        <div className="col-5 pb-3">
-                            <Card title="Casos Confirmados" content="30" />
+            <div className="row d-flex mt-5">
+                <div className="col-md-6 align-self-center">
+                    <h3 className="text-center">{data.state && `Casos em ${data.state}`}</h3>
+                    <div className="card-deck">
+                        <div className="col-lg-12 pb-3">
+                            <Card title="Confirmados" content={data.cases} />
                         </div>
-                        <div className="col-5 pb-3">
-                            <Card title="Casos de Curas" content="30" />
+                        <div className="col-lg-6 pb-3">
+                            <Card title="Suspeitas" content={data.suspects} />
                         </div>
-                        <div className="col-5 pb-3">
-                            <Card title="Casos Descartados" content="30" />
-                        </div>
-                        <div className="col-5 pb-3">
-                            <Card title="Casos de Mortes" content="30" />
+                        <div className="col-lg-6 pb-3">
+                            <Card title="Mortes" content={data.deaths} />
                         </div>
                     </div>
                 </div>
-                <div className="col-6">
-                    <Map />
+                <div className="col-md-6">
+                    <Map setData={setData} />
                 </div>
             </div>
         </div>

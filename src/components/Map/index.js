@@ -6,15 +6,17 @@ import { clientAPICovid } from '../../services/api'
 //Dependencies
 import { VectorMap } from "react-jvectormap";
 
-const handleClick = (e, stateCode) => {
-    clientAPICovid.get(`/brazil/uf/${stateCode}`)
-        .then(res => {
-            console.log(res.data);
-        })
-        .catch(err => console.log(err.message));
-};
+const Map = ({ setData }) => {
 
-const Map = () => {
+    const handleClick = (e, stateCode) => {
+        setTimeout(()=> { Array.from(document.getElementsByClassName("jvectormap-tip")).forEach((el) => { el.style.display = 'none' }); },100);
+        clientAPICovid.get(`/brazil/uf/${stateCode}`)
+            .then(res => {
+                setData(res.data)
+            })
+            .catch(err => console.log(err.message))
+    };
+
     return (
         <div>
             <VectorMap
@@ -38,6 +40,9 @@ const Map = () => {
                         fill: "#48B97D",
                         "fill-opacity": 0.9
                     }
+                }}
+                onRegionLabelShow={function (e, el, code) {
+                    e.preventDefault();
                 }}
                 regionsSelectable
                 regionsSelectableOne
