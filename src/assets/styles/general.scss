@@ -337,23 +337,31 @@ table {
     }
 }
 
+.state-name{
+    text-align: center;
+    font-weight:bold;
+    font-size:42px;
+    color:$green;
+}
+
 .card-trackovid {
     box-shadow: 0 4px 8px 0 rgba($black, 0.2), 0 6px 20px 0 rgba($black, 0.19);
     border-radius: .75rem;
-    
    // padding: 2px;
     div:first-child {
-      //  background-color: #304153;
+        //background-color: #304153;
         //color: #ffffff;
         text-align: center;
     }
-    .card-header {
-        //border-bottom: 0;
-        border-radius: calc(.75rem - 1px) calc(.75rem - 1px) 0 0;
-        background-color: $green;
-        color: $white;
-    }
     .card-body {
-        min-height: 80px;
+        min-height: 70px;
+        h5{
+            font-size: 44px;
+        }
+        p{
+            margin:0;
+            font-size: 12px;
+            text-align: center;
+        }
     }
 }

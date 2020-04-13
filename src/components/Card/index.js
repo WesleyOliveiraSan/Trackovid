@@ -1,17 +1,11 @@
 import React from 'react';
 
-const Card = (props) => (
+const Card = ({ title, content }) => (
     <div className="card card-trackovid">
         <div>
-            <div className="card-header">
-                {
-                    props.title
-                }
-            </div>
             <div className="card-body">
-                {
-                    props.content
-                }
+                <h5>{content}</h5>
+                <p>{title}</p>
             </div>
         </div>
     </div>
