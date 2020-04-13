@@ -8,7 +8,7 @@ function HomeMap() {
     const [data, setData] = useState([])
 
     return (
-        <div className="row d-flex mt-5">
+        <div className="row d-flex mt-5 p-5">
             <div className="col-md-6 align-self-center">
                 <h3 className="state-name">{data.state && data.state}</h3>
                 <div className="card-deck">

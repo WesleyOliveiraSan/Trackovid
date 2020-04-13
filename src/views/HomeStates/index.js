@@ -16,7 +16,7 @@ function HomeStates() {
     }, [])
 
     return (
-        <div className="mt-5">
+        <div className="mt-5 p-5">
             <h1 className="text-center mb-5">Casos por Estado</h1>
             <table className="table table-hover text-dark">
                 <thead>

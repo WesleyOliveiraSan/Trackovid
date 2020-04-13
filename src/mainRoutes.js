@@ -11,11 +11,10 @@ import HomeStates from './views/HomeStates'
 
 const MainRoutes = () => (
     <Routes>
-        <Route path="/" element={<Home />}>
-            <Route path='mapa' element={<HomeMap />} />
-            <Route path='brasil' element={<HomeBrazil />} />
-            <Route path='estados' element={<HomeStates />} />
-        </Route>
+        <Route path="/" element={<Home />} />
+        <Route path='mapa' element={<HomeMap />} />
+        <Route path='brasil' element={<HomeBrazil />} />
+        <Route path='estados' element={<HomeStates />} />
     </Routes>
 )
 
