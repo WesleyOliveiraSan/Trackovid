@@ -10,7 +10,7 @@ const Card = (props) => (
             </div>
             <div className="card-body">
                 {
-                props.content
+                    props.content
                 }
             </div>
         </div>
