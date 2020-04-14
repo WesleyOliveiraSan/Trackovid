@@ -30,9 +30,9 @@ function Sidenav() {
             </div>
             <div style={links ? { display: 'block' } : { display: 'none' }}>
                 <Link className={`link ${path === '/' && 'active'}`} onClick={() => setPath('/')} to="/">Inicio</Link>
-                <Link className={`link ${path === '/mapa' && 'active'}`} onClick={() => setPath('/mapa')} to="mapa">Mapa</Link>
-                <Link className={`link ${path === '/brasil' && 'active'}`} onClick={() => setPath('/brasil')} to="brasil">Brasil</Link>
-                <Link className={`link ${path === '/estados' && 'active'}`} onClick={() => setPath('/estados')} to="estados">Estados</Link>
+                <Link className={`link ${path === '/mapa-do-brasil' && 'active'}`} onClick={() => setPath('/mapa-do-brasil')} to="mapa-do-brasil">Mapa do Brasil</Link>
+                <Link className={`link ${path === '/estatisticas-do-pais' && 'active'}`} onClick={() => setPath('/estatisticas-do-pais')} to="estatisticas-do-pais">Estatísticas do País</Link>
+                <Link className={`link ${path === '/todos-os-estados' && 'active'}`} onClick={() => setPath('/todos-os-estados')} to="todos-os-estados">Todos os Estados</Link>
             </div>
         </nav>
     )

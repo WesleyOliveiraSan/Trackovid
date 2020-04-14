@@ -5,16 +5,16 @@ import { Routes, Route } from 'react-router-dom';
 
 //Views
 import Home from './views/Home';
-import HomeMap from './views/HomeMap'
-import HomeBrazil from './views/HomeBrazil'
-import HomeStates from './views/HomeStates'
+import MapView from './views/MapView'
+import Brazil from './views/Brazil'
+import States from './views/States'
 
 const MainRoutes = () => (
     <Routes>
         <Route path="/" element={<Home />}>
-            <Route path='mapa' element={<HomeMap />} />
-            <Route path='brasil' element={<HomeBrazil />} />
-            <Route path='estados' element={<HomeStates />} />
+            <Route path='mapa-do-brasil' element={<MapView />} />
+            <Route path='estatisticas-do-pais' element={<Brazil />} />
+            <Route path='todos-os-estados' element={<States />} />
         </Route>
     </Routes>
 )
