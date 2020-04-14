@@ -45,7 +45,7 @@ function MapView() {
                                         value: data.deaths
                                     },
                                 ]}
-                                size={window.innerWidth <= "420" ? "50px" : "60px"}
+                                size={window.innerWidth <= "420" ? "40px" : "60px"}
                                 label={true}
                             />}
                         />
@@ -59,8 +59,8 @@ function MapView() {
                 </div>
             </div>
             :
-            <div className="col-lg-6 row d-flex align-content-center justify-content-center">
-                 <h2 className="font-weight-bold">Selecione um Estado</h2>
+            <div className="col-lg-6 row d-lg-flex d-none align-content-center justify-content-center px-0">
+                 <h2 className="font-weight-bold text-center">Selecione um Estado</h2>
             </div>
             }
         </div>
