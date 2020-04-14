@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from 'react'
 
-//Dependencies
-import PieChart from 'react-minimal-pie-chart'
-
 //Services
 import { clientAPICovid } from '../../services/api'
 
 //Components
 import Card from '../../components/Card'
+import Chart from '../../components/Chart'
 
 function Brazil() {
 
@@ -31,46 +29,24 @@ function Brazil() {
                 data.country &&
                 <>
                     <div className="col-md-12">
-                        <PieChart
-                            animate={true}
-                            animationDuration={1000}
-                            animationEasing="ease-out"
-                            cx={50}
-                            cy={50}
-                            data={[
-                                {
-                                    color: '#c02739',
-                                    title: 'Casos Ativos',
-                                    value: data.cases
-                                },
-                                {
-                                    color: '#29c7ac',
-                                    title: 'Curados',
-                                    value: data.recovered
-                                },
-                                {
-                                    color: '#54123b',
-                                    title: 'Mortes',
-                                    value: data.deaths
-                                },
-                            ]}
-                            label={window.innerWidth <= 425 ? false : true}
-                            labelPosition={112}
-                            labelStyle={{
-                                fontFamily: 'Lato',
-                                fontSize: '10px'
-                            }}
-                            lengthAngle={360}
-                            lineWidth={20}
-                            paddingAngle={5}
-                            radius={50}
-                            style={{
-                                height: '250px'
-                            }}
-                            viewBoxSize={[
-                                100,
-                                100
-                            ]}
+                        <Chart data={[
+                            {
+                                color: '#c02739',
+                                title: 'Casos Ativos',
+                                value: data.cases
+                            },
+                            {
+                                color: '#29c7ac',
+                                title: 'Curados',
+                                value: data.recovered
+                            },
+                            {
+                                color: '#54123b',
+                                title: 'Mortes',
+                                value: data.deaths
+                            },
+                        ]} 
+                        size="250px"
                         />
                     </div>
                     <div className="col-md-12 align-self-center mt-5">
