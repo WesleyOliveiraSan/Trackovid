@@ -3,7 +3,7 @@ import React from 'react'
 //Dependencies
 import PieChart from 'react-minimal-pie-chart'
 
-function Chart({ data, size }) {
+function Chart({ data, size, label }) {
     return (
         <PieChart
             animate={true}
@@ -12,7 +12,7 @@ function Chart({ data, size }) {
             cx={50}
             cy={50}
             data={data}
-            label={window.innerWidth <= 425 ? false : true}
+            label={label ? false : window.innerWidth <= 425 ? false : true}
             labelPosition={112}
             labelStyle={{
                 fontFamily: 'Lato',
