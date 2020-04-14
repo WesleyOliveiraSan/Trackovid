@@ -21,7 +21,7 @@ function States() {
                 <h1>Todos os Estados</h1>
                 <p>Visualize a tabela com dados de cada estado do Brasil</p>
             </div>
-            <table className="table table-hover text-dark">
+            <table className="table table-responsive table-hover text-dark">
                 <thead>
                     <tr>
                         <th>UF</th>
