@@ -52,16 +52,16 @@ function Brazil() {
                     <div className="col-md-12 align-self-center mt-5">
                         <div className="row">
                             <div className="col-lg-3 col-6 pb-3">
-                                <Card title="Confirmados" content={data.confirmed.toLocaleString('de-DE')} color="#84142d" />
+                                <Card title="Confirmados" content={data.confirmed.toLocaleString('de-DE')} bgColor="#84142d" />
                             </div>
                             <div className="col-lg-3 col-6 pb-3">
-                                <Card title="Casos Ativos" content={data.cases.toLocaleString('de-DE')} color="#c02739" />
+                                <Card title="Casos Ativos" content={data.cases.toLocaleString('de-DE')} bgColor="#c02739" />
                             </div>
                             <div className="col-lg-3 col-6 pb-3">
-                                <Card title="Curados" content={data.recovered.toLocaleString('de-DE')} color="#29c7ac" />
+                                <Card title="Curados" content={data.recovered.toLocaleString('de-DE')} bgColor="#29c7ac" />
                             </div>
                             <div className="col-lg-3 col-6 pb-3">
-                                <Card title="Mortes" content={data.deaths.toLocaleString('de-DE')} color="#54123b" />
+                                <Card title="Mortes" content={data.deaths.toLocaleString('de-DE')} bgColor="#54123b" />
                             </div>
                         </div>
                     </div>
