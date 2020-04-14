@@ -11,24 +11,26 @@ import { Link } from 'react-router-dom'
 
 function Sidenav() {
 
+    let navOpen = window.innerWidth < 768 ? false : true
+
     const [path, setPath] = useState(window.location.pathname)
-    const [links, setLinks] = useState(true)
+    const [menu, setMenu] = useState(navOpen)
 
     return (
         <nav>
             <div className="d-md-none d-flex justify-content-between">
-                <Link className="link font-weight-bold" to="/">Trackovid</Link>
-                <img className="menu" src={Menu} onClick={() => setLinks(!links)} alt="close" />
+                <Link className="link font-weight-bold" to="/" onClick={() => setPath('/')}>Trackovid</Link>
+                <img className="menu" src={Menu} onClick={() => setMenu(!menu)} alt="close" />
             </div>
             <div>
                 <img className="logo" src={Logo} alt="Mask Logo" />
                 <p className="desc">Aplicação para rastrear os casos de Covid-19 no Brasil</p>
-                <div className="nav-div d-md-flex d-none justify-content-between" onClick={() => setLinks(!links)}>
+                <div className="nav-div d-md-flex d-none justify-content-between" onClick={() => setMenu(!menu)}>
                     <p>Navigation</p>
-                    <img className="menu" src={links ? On : Off} onClick={() => setLinks(!links)} alt="close" />
+                    <img className="menu" src={menu ? On : Off} onClick={() => setMenu(!menu)} alt="close" />
                 </div>
             </div>
-            <div style={links ? { display: 'block' } : { display: 'none' }}>
+            <div style={menu ? { display: 'block' } : { display: 'none' }}>
                 <Link className={`link ${path === '/' && 'active'}`} onClick={() => setPath('/')} to="/">Inicio</Link>
                 <Link className={`link ${path === '/mapa-do-brasil' && 'active'}`} onClick={() => setPath('/mapa-do-brasil')} to="mapa-do-brasil">Mapa do Brasil</Link>
                 <Link className={`link ${path === '/estatisticas-do-pais' && 'active'}`} onClick={() => setPath('/estatisticas-do-pais')} to="estatisticas-do-pais">Estatísticas do País</Link>
