@@ -9,24 +9,28 @@ function MapView() {
     const [data, setData] = useState([])
 
     return (
-        <div className="row d-flex mt-5 p-5">
-            <div className="col-md-6 align-self-center">
-                <h3 className="state-name">{data.state && data.state}</h3>
-                <div className="card-deck">
-                    <div className="col-lg-12 pb-3">
-                        <Card title="Casos Confirmados" content={data.cases} />
-                    </div>
-                    <div className="col-lg-6 pr-0 pb-3">
-                        <Card title="Suspeitas" content={data.suspects} />
-                    </div>
-                    <div className="col-lg-6 pl-0 pb-3">
-                        <Card title="Mortes" content={data.deaths} />
-                    </div>
-                </div>
+        <div className="row d-flex">
+            <div className="map-view-header col-12 mb-4">
+                <h1>Mapa do Brasil</h1>
+                <p>Visualize a situação de cada estado</p>
             </div>
-            <div className="col-md-6">
+            <div className="col-lg-6 px-0">
                 <Map setData={setData} />
             </div>
+            {data.state && <div className="col-lg-6 align-self-center">
+                <h3 className="state-name mb-4">{data.state}</h3>
+                <div className="row">
+                    <div className="col-12 pb-3">
+                        <Card title="Casos Confirmados" content={data.cases.toLocaleString('de-DE')} />
+                    </div>
+                    <div className="col-6 pr-2 pb-3">
+                        <Card title="Suspeitas" content={data.suspects.toLocaleString('de-DE')} />
+                    </div>
+                    <div className="col-6 pl-2 pb-3">
+                        <Card title="Mortes" content={data.deaths.toLocaleString('de-DE')} />
+                    </div>
+                </div>
+            </div>}
         </div>
 
     )

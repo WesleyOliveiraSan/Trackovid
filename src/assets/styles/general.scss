@@ -97,7 +97,7 @@ header {
 }
 
 main {
-    padding-top:60px;
+    padding:100px 60px 0px 60px;
     margin-left: 200px;
 }
 
@@ -128,8 +128,20 @@ main {
     }
 
     main{
+        padding: 60px 40px 0px 40px;
         margin-left: 0;
     }
+
+    .map-view-header{
+        text-align:center;
+        h1{
+            font-size:36px;
+        }
+        p{
+            margin:0;
+        }
+    }
+
 }
 
 @include mq('phone','max'){   
@@ -175,7 +187,7 @@ a, button, input {
 }
 
 .card-trackovid {
-    box-shadow: 0 4px 8px 0 rgba($black, 0.2), 0 6px 20px 0 rgba($black, 0.19);
+    box-shadow: 0 4px 8px 0 rgba($black, 0.2), 0 6px 20px 0 rgba($green, 0.19);
     border-radius: .75rem;
     div:first-child {
         text-align: center;
@@ -184,6 +196,7 @@ a, button, input {
         min-height: 70px;
         h5{
             font-size: 44px;
+            @include mq('phone','max'){ font-size:34px; } 
         }
         p{
             margin:0;
@@ -199,5 +212,17 @@ table{
     thead{
         background-color: $green;
         color:white;
+    }
+}
+
+.map-view-header{
+    h1{
+        color:$black;
+        font-weight:bold;
+    }
+    p{
+        color:rgba($black,0.5);
+        margin-top: -15px;
+        margin-left: 5px;
     }
 }
