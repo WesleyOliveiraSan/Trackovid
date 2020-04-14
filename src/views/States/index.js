@@ -16,8 +16,11 @@ function States() {
     }, [])
 
     return (
-        <div className="mt-5 p-5">
-            <h1 className="text-center mb-5">Casos por Estado</h1>
+        <div className="row d-flex">
+            <div className="body-header col-12 mb-4">
+                <h1>Todos os Estados</h1>
+                <p>Visualize a tabela com dados de cada estado do Brasil</p>
+            </div>
             <table className="table table-hover text-dark">
                 <thead>
                     <tr>
