@@ -19,7 +19,7 @@ function Brazil() {
     }, [])
 
     return (
-        <div className="row d-flex mt-5">
+        <div className="row d-flex mt-5 p-5">
             <div className="col-md-12 align-self-center">
                 <h1 className="text-center mb-5">Casos no Brasil</h1>
                 <div className="card-deck">

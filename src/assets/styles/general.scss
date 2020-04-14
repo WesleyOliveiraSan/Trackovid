@@ -1,15 +1,11 @@
 body {
 
-    *{
+    * {
         font-family: 'Lato';
     }
 
     background-color: $white;
     color: $black;
-    font: {
-        family: Museo-300,sans-serif;
-        size: 4.2vw;
-    };
 
     @include mq('phablet') {
         font-size: 16px;
@@ -43,11 +39,13 @@ nav {
         margin: 25px auto;
         width: 80px;
     }
+
     .desc{
         text-align:center;
         font-size: 12px;
         color: rgba($white,0.9);
     }
+
     .link {
         display: block;
         padding: 16px;
@@ -57,19 +55,20 @@ nav {
             color: white;
         }
     }
+
     .active{
         border-left: 5px solid rgba($blue,0.8);
         background-color: rgba(0,0,0,0.2);
     }
-   
 
 }
 
-header{
+header {
     background-color: $blue;
     position: fixed;
     width: 100%;
     z-index:99999;
+
     h1{
         background-color: rgba($white,0.2);
         padding: 0px 10px;
@@ -83,6 +82,7 @@ header{
             background-color: rgba($white,0.1);
         }
     }
+
     img{
         background-color: $white;
         width:35px;
@@ -93,13 +93,16 @@ header{
             background-color: rgba($white,0.9)
         }
     }
+
 }
-main{
+
+main {
     padding-top:60px;
     margin-left: 200px;
 }
+
 @include mq('tablet','max'){   
-    nav{    
+    nav {    
         width: 100%;
         height: auto;       
         position: relative;
@@ -123,11 +126,14 @@ main{
             background-color: rgba(0,0,0,0.2);
         }
     }
+
     main{
         margin-left: 0;
     }
 }
+
 @include mq('phone','max'){   
+
     nav{    
         width: 100%;
         height: auto;       
@@ -136,11 +142,13 @@ main{
             display: none;
         }
     }
+    
     main{
         margin-left: 0;
     }
 }
 
+//styles reset
 
 img {
     max-width: 100%;
@@ -159,185 +167,7 @@ a, button, input {
     color: inherit!important;
 }
 
-button[disabled] {
-    cursor: not-allowed;
-}
-
-strong {
-    font-family: Museo-900;
-}
-
-.container {
-    max-width: 768px;
-    width: 100%;
-}
-
-.wrapper-content {
-    padding: 0 10px;
-}
-
-.wrapper-code {
-    background-color: #00a4df;
-    padding: 10px 15px;
-    color: $white;
-    font: {
-        family: Museo-Sans-500;
-        size: 20px;
-    };
-}
-
-.group-cards-form {
-    margin: 20px auto;
-
-    .wrapper-card {
-        padding: 0 10px;
-        margin: 10px auto;
-    }
-
-    .card-disabled {
-        .card-elo {
-            cursor: not-allowed!important;
-        }
-
-        .card-check {
-            display: none!important;
-        }
-    }
-}
-
-.card-elo {
-    position: relative;
-    max-width: 187px;
-    width: 187px;
-    height: 121px;
-    border-radius: 13px;
-    background-color: #191919;
-    cursor: pointer;
-    color: $white;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-
-    margin: 0 auto;
-
-    .card-container {
-        padding: 12px;
-    }
-
-    &-check {
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 2px 4px 0 rgba(0, 0, 0, 0.5);
-
-        width: 100%;
-    }
-
-    &.active {
-        box-shadow: 0 12px 14px 0 rgba(0, 0, 0, 0.3), 0 2px 4px 0 rgba(0, 0, 0, 0.5);
-
-        .card-check {
-            background-color: #ffffff;
-            color: #191919;
-        }
-
-        .card-logo {
-            opacity: 1;
-
-            .check {
-                display: inline-block;
-            }
-            .no-check {
-                display: none;
-            }
-        }
-    }
-
-    &.inverse {
-        .wrapper-card-header {
-            @include absolute($bottom: 0, $left: 0);
-        }
-        .wrapper-card-footer {
-            @include absolute($top: 0, $left: 0);
-        }
-    }
-
-    .wrapper-card-footer {
-        @include absolute($bottom: 0, $left: 0);
-        width: 100%;
-    }
-
-    .card-check {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        float: left;
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        background-color: #2d2d2d;
-        color: #5e5e5e;
-    }
-
-    .card-logo {
-        float: right;
-        opacity: .2;
-
-        img {
-            max-width: 41px;
-        }
-
-        .check {
-            display: none;
-        }
-        .no-check {
-            display: inline-block;
-        }
-    }
-}
-
-.slick-next {
-    right: 0;
-
-    &:before {
-        background-image: url("/images/arrow-right.png");
-    }
-}
-.slick-prev {
-    left: 0;
-
-    &:before {
-        background-image: url("/images/arrow-left.png");
-    }
-}
-
-.slick-next, .slick-prev {
-    height: 25px;
-
-    &:before {
-        content: '';
-        background: {
-            position: center;
-            size: cover;
-            repeat: no-repeat;
-        };
-        width: 12px;
-        height: 25px;
-        display: block;
-        margin: 0 auto;
-    }
-}
-
-table {
-    color: $white!important;
-}
-.list-number {
-    padding-left: 15px;
-    li {
-        .card-header {
-            border-bottom: 0;
-            background-color: transparent;
-        }
-        margin: 5px auto;
-    }
-}
-
-.state-name{
+.state-name {
     text-align: center;
     font-weight:bold;
     font-size:42px;
@@ -347,10 +177,7 @@ table {
 .card-trackovid {
     box-shadow: 0 4px 8px 0 rgba($black, 0.2), 0 6px 20px 0 rgba($black, 0.19);
     border-radius: .75rem;
-   // padding: 2px;
     div:first-child {
-        //background-color: #304153;
-        //color: #ffffff;
         text-align: center;
     }
     .card-body {

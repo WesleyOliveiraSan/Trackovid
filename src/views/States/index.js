@@ -16,7 +16,7 @@ function States() {
     }, [])
 
     return (
-        <div className="mt-5">
+        <div className="mt-5 p-5">
             <h1 className="text-center mb-5">Casos por Estado</h1>
             <table className="table table-hover text-dark">
                 <thead>
@@ -31,7 +31,7 @@ function States() {
                 <tbody>
                     {
                         data.map(state =>
-                            <tr>
+                            <tr key={state.uf}>
                                 <th>{state.uf}</th>
                                 <td>{state.state}</td>
                                 <td>{state.cases}</td>
