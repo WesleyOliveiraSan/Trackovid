@@ -10,7 +10,7 @@ function MapView() {
 
     return (
         <div className="row d-flex">
-            <div className="map-view-header col-12 mb-4">
+            <div className="body-header col-12 mb-4">
                 <h1>Mapa do Brasil</h1>
                 <p>Visualize a situação de cada estado</p>
             </div>

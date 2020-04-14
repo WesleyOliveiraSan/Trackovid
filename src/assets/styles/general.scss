@@ -132,10 +132,10 @@ main {
         margin-left: 0;
     }
 
-    .map-view-header{
+    .body-header{
         text-align:center;
         h1{
-            font-size:36px;
+            font-size:33px;
         }
         p{
             margin:0;
@@ -196,7 +196,9 @@ a, button, input {
         min-height: 70px;
         h5{
             font-size: 44px;
-            @include mq('phone','max'){ font-size:34px; } 
+            @include mq('desktop','max'){ font-size:34px; } 
+            @include mq('phone','max'){ font-size:26px; } 
+            @include mq('phone-super-small','max'){ font-size:20px; } 
         }
         p{
             margin:0;
@@ -215,7 +217,7 @@ table{
     }
 }
 
-.map-view-header{
+.body-header{
     h1{
         color:$black;
         font-weight:bold;
