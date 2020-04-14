@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react'
 
+//Dependencies
+import PieChart from 'react-minimal-pie-chart'
+
 //Services
 import { clientAPICovid } from '../../services/api'
 
@@ -19,24 +22,76 @@ function Brazil() {
     }, [])
 
     return (
-        <div className="row d-flex mt-5 p-5">
-            <div className="col-md-12 align-self-center">
-                <h1 className="text-center mb-5">Casos no Brasil</h1>
-                <div className="card-deck">
-                    <div className="col-lg-3 px-0 pb-3">
-                        <Card title="Casos" content={data.cases} />
-                    </div>
-                    <div className="col-lg-3 px-0 pb-3">
-                        <Card title="Confirmados" content={data.confirmed} />
-                    </div>
-                    <div className="col-lg-3 px-0 pb-3">
-                        <Card title="Curados" content={data.recovered} />
-                    </div>
-                    <div className="col-lg-3 px-0 pb-3">
-                        <Card title="Mortes" content={data.deaths} />
-                    </div>
-                </div>
+        <div className="row d-flex">
+            <div className="body-header col-12 mb-4">
+                <h1>Estatísticas do País</h1>
+                <p>Visualize a situação atual do Brasil</p>
             </div>
+            {
+                data.country &&
+                <>
+                    <div className="col-md-12">
+                        <PieChart
+                            animate={true}
+                            animationDuration={1000}
+                            animationEasing="ease-out"
+                            cx={50}
+                            cy={50}
+                            data={[
+                                {
+                                    color: '#c02739',
+                                    title: 'Casos Ativos',
+                                    value: data.cases
+                                },
+                                {
+                                    color: '#29c7ac',
+                                    title: 'Curados',
+                                    value: data.recovered
+                                },
+                                {
+                                    color: '#54123b',
+                                    title: 'Mortes',
+                                    value: data.deaths
+                                },
+                            ]}
+                            label={window.innerWidth <= 425 ? false : true}
+                            labelPosition={112}
+                            labelStyle={{
+                                fontFamily: 'Lato',
+                                fontSize: '10px'
+                            }}
+                            lengthAngle={360}
+                            lineWidth={20}
+                            paddingAngle={5}
+                            radius={50}
+                            style={{
+                                height: '250px'
+                            }}
+                            viewBoxSize={[
+                                100,
+                                100
+                            ]}
+                        />
+                    </div>
+                    <div className="col-md-12 align-self-center mt-5">
+                        <div className="row">
+                            <div className="col-lg-3 col-6 pb-3">
+                                <Card title="Confirmados" content={data.confirmed.toLocaleString('de-DE')} color="#84142d" />
+                            </div>
+                            <div className="col-lg-3 col-6 pb-3">
+                                <Card title="Casos Ativos" content={data.cases.toLocaleString('de-DE')} color="#c02739" />
+                            </div>
+                            <div className="col-lg-3 col-6 pb-3">
+                                <Card title="Curados" content={data.recovered.toLocaleString('de-DE')} color="#29c7ac" />
+                            </div>
+                            <div className="col-lg-3 col-6 pb-3">
+                                <Card title="Mortes" content={data.deaths.toLocaleString('de-DE')} color="#54123b" />
+                            </div>
+                        </div>
+                    </div>
+                </>
+            }
+
         </div>
     )
 }
