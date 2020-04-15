@@ -15,6 +15,7 @@ function Sidenav() {
 
     const [path, setPath] = useState(window.location.pathname)
     const [menu, setMenu] = useState(navOpen)
+    
 
     return (
         <nav>

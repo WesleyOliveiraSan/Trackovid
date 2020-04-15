@@ -13,7 +13,7 @@ function MapView() {
         <div className="row d-flex">
             <div className="body-header col-12 mb-4">
                 <h1>Mapa do Brasil</h1>
-                <p>Visualize a situação de cada estado</p>
+                <p>Visualize os casos de cada estado</p>
             </div>
             <div className="col-lg-6 px-0">
                 <Map setData={setData} />
@@ -22,7 +22,7 @@ function MapView() {
                 <h3 className="state-name mb-4">{data.state}</h3>
                 <div className="row">
                     <div className="col-6 pb-3">
-                        <Card title="Casos Confirmados" color="#c02739" content={data.cases.toLocaleString('de-DE')} />
+                        <Card title="Confirmados" color="#c02739" content={data.cases.toLocaleString('de-DE')} />
                     </div>
                     <div className="col-6 pb-3">
                         <Card
@@ -45,7 +45,7 @@ function MapView() {
                                         value: data.deaths
                                     },
                                 ]}
-                                size={window.innerWidth <= "420" ? "50px" : "60px"}
+                                size={window.innerWidth <= "420" ? "40px" : "60px"}
                                 label={true}
                             />}
                         />
@@ -59,8 +59,8 @@ function MapView() {
                 </div>
             </div>
             :
-            <div className="col-lg-6 row d-flex align-content-center justify-content-center">
-                 <h2 className="font-weight-bold">Selecione um Estado</h2>
+            <div className="col-lg-6 row d-lg-flex d-none align-content-center justify-content-center px-0">
+                 <h2 className="font-weight-bold text-center">Selecione um Estado</h2>
             </div>
             }
         </div>
