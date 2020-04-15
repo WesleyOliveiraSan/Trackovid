@@ -13,7 +13,7 @@ function Chart({ data, size, label }) {
             cy={50}
             data={data}
             label={label ? false : window.innerWidth <= 425 ? false : true}
-            labelPosition={112}
+            labelPosition={60}
             labelStyle={{
                 fontFamily: 'Lato',
                 fontSize: '10px'
