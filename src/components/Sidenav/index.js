@@ -34,10 +34,10 @@ function Sidenav() {
                 </div>
             </div>
             <div style={menu ? { display: 'block' } : { display: 'none' }}>
-                <Link className={`link ${path === '/' && 'active'}`} onClick={() => { setPath('/'); setMenu(!menu) }} to="/">Inicio</Link>
-                <Link className={`link ${path === '/mapa-do-brasil' && 'active'}`} onClick={() => { setPath('/mapa-do-brasil'); setMenu(!menu) }} to="mapa-do-brasil">Mapa do Brasil</Link>
-                <Link className={`link ${path === '/estatisticas-do-pais' && 'active'}`} onClick={() => { setPath('/estatisticas-do-pais'); setMenu(!menu) }} to="estatisticas-do-pais">Estatísticas do País</Link>
-                <Link className={`link ${path === '/todos-os-estados' && 'active'}`} onClick={() => { setPath('/todos-os-estados'); setMenu(!menu) }} to="todos-os-estados">Todos os Estados</Link>
+                <Link className={`link ${path === '/' && 'active'}`} onClick={() => { setPath('/'); !navOpen && setMenu(!menu) }} to="/">Inicio</Link>
+                <Link className={`link ${path === '/mapa-do-brasil' && 'active'}`} onClick={() => { setPath('/mapa-do-brasil'); !navOpen && setMenu(!menu) }} to="mapa-do-brasil">Mapa do Brasil</Link>
+                <Link className={`link ${path === '/estatisticas-do-pais' && 'active'}`} onClick={() => { setPath('/estatisticas-do-pais'); !navOpen && setMenu(!menu) }} to="estatisticas-do-pais">Estatísticas do País</Link>
+                <Link className={`link ${path === '/todos-os-estados' && 'active'}`} onClick={() => { setPath('/todos-os-estados'); !navOpen && setMenu(!menu) }} to="todos-os-estados">Todos os Estados</Link>
             </div>
             <ScrollButton scroll="top" position="65" />
             <ScrollButton scroll="bottom" position="15" />
