@@ -6,6 +6,9 @@ import Menu from '../../assets/images/menu.png'
 import On from '../../assets/images/switch-on.png'
 import Off from '../../assets/images/switch-off.png'
 
+//Components
+import ScrollButton from '../ScrollButton'
+
 //Dependencies
 import { Link } from 'react-router-dom'
 
@@ -15,7 +18,6 @@ function Sidenav() {
 
     const [path, setPath] = useState(window.location.pathname)
     const [menu, setMenu] = useState(navOpen)
-    
 
     return (
         <nav>
@@ -37,6 +39,8 @@ function Sidenav() {
                 <Link className={`link ${path === '/estatisticas-do-pais' && 'active'}`} onClick={() => setPath('/estatisticas-do-pais')} to="estatisticas-do-pais">Estatísticas do País</Link>
                 <Link className={`link ${path === '/todos-os-estados' && 'active'}`} onClick={() => setPath('/todos-os-estados')} to="todos-os-estados">Todos os Estados</Link>
             </div>
+            <ScrollButton scroll="top" position="65" />
+            <ScrollButton scroll="bottom" position="15" />
         </nav>
     )
 }
