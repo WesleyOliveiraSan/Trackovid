@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 //Components
 import Map from '../../components/Map'
@@ -8,6 +8,10 @@ import Chart from '../../components/Chart'
 function MapView() {
 
     const [data, setData] = useState([])
+
+    useEffect(() => {
+        document.documentElement.scrollTo(0, document.body.scrollHeight)
+    }, [data])
 
     return (
         <div className="row d-flex">
@@ -58,10 +62,10 @@ function MapView() {
                     </div>
                 </div>
             </div>
-            :
-            <div className="col-lg-6 row d-lg-flex d-none align-content-center justify-content-center px-0">
-                 <h2 className="font-weight-bold text-center">Selecione um Estado</h2>
-            </div>
+                :
+                <div className="col-lg-6 row d-lg-flex d-none align-content-center justify-content-center px-0">
+                    <h2 className="font-weight-bold text-center">Selecione um Estado</h2>
+                </div>
             }
         </div>
 
