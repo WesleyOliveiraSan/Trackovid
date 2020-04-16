@@ -1,20 +1,22 @@
-import React from 'react';
+import React from 'react'
 
-const CardHome = ({ title, description, type, template }) => (
-    <div className={template + " item-data-panel template " + (type == "active" ? "item-data-panel-active" : "item-data-panel-small")}>
-        <div className="h-100 position-relative">
-            <div className="item-body">
-                <div className="content">
-                    <p className="title">
-                        {title}
-                    </p>
-                    <p className="description">
-                        {description}
-                    </p>
-                </div>
+function CardHome({ img, title = "", link = "", text, desc = "" }) {
+    return (
+        <div className="card border-0">
+            <div className="card-body p-0 m-2">
+                {link === "" ?
+                <img className="card-img-top rounded-circle img-fluid mx-auto d-block" src={img} alt={title ? title:text}/>
+                :
+                <a href={link} target="_blank" rel="noopener noreferrer">
+                    <img className="card-img-top rounded-circle img-fluid mx-auto d-block" src={img} alt={title ? title:text}/>
+                </a>
+                }
+                <p className="card-title text-center font-weight-bold">{title}</p>
+                <p className="card-text text-center font-weight-bold mt-2">{text}</p>
+                <p className="card-text text-center mt-n3" style={{fontSize:"12px"}}>{desc}</p>
             </div>
         </div>
-    </div>
-);
+    )
+}
 
-export default CardHome;
+export default CardHome
