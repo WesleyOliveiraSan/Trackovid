@@ -13,9 +13,9 @@ function ScrollButton({ scroll, position }) {
         <>
             {
                 scroll === "top" ?
-                    <button className="scroll-btn d-md-none" onClick={() => scrollToTop()} style={{ bottom: `${position}px` }}><img src={Up}></img></button>
+                    <button className="scroll-btn d-md-none" onClick={() => scrollToTop()} style={{ bottom: `${position}px` }}><img src={Up} alt="Up Arrow"></img></button>
                     :
-                    <button className="scroll-btn d-md-none" onClick={() => scrollToBottom()} style={{ bottom: `${position}px` }}><img src={Down}></img></button>
+                    <button className="scroll-btn d-md-none" onClick={() => scrollToBottom()} style={{ bottom: `${position}px` }}><img src={Down} alt="Down Arrow"></img></button>
             }
         </>
     )
